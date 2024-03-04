@@ -5,7 +5,12 @@
 
 package entidadFinanciera;
 
-
+/**
+ * 
+ * @author María Carolina García Correas
+ * @version 1.0
+ * @since 04/03/2024
+ */
 public class CCuenta {
 
     /**
@@ -21,6 +26,13 @@ public class CCuenta {
     {
     }
 
+    /**
+     * Método constructor
+     * @param nom
+     * @param cue
+     * @param sal
+     * @param tipo 
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -28,10 +40,19 @@ public class CCuenta {
         saldo=sal;
     }
     
+    /**
+     * 
+     * @return saldo actual
+     */
     public double estado(){
         return this.getSaldo();
     }
 
+    /**
+     * Método ingresar
+     * @param cantidad
+     * @throws Exception 
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -39,6 +60,11 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * Método retirar
+     * @param cantidad
+     * @throws Exception 
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
